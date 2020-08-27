@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block CSS %}
+{% endblock CSS %}
+{% block content %}
+<div class="container my-4">
+<div class="jumbotron text-center">
+    <h1 class="display-4">{{ name.Title }}</h1>
+    <p class="lead">{{ name.Description }}</p>
+    <hr class="my-4">
+    <a href="{{ name.PythonFile.url }}" class="btn btn-primary">Python Code</a>
+    <a href="{{ name.ExeFile.url }}" class="btn btn-primary">Download .exe File</a>
+</div>
+</div>
+{% endblock content %}

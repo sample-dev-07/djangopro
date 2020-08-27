@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+body{
+    background-color: antiquewhite;
+}
+.row{
+margin: 0 10px;
+}
+.card{
+    margin: 20px 0;
+}
+{% endblock css %}
+{% block content %}
+<div class="row text-center">
+{% for item in items %}
+<div class="col-sm-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.Title }}</h5>
+            <p class="card-text">{{ item.Description }}</p>
+            <a href="{{ item.PythonFile.url }}" class="btn btn-primary">Python Code</a>
+            <a href="{{ item.ExeFile.url }}" class="btn btn-primary">Download .exe File</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+<!-- <div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Downlaod .exe File</a>
+                <a href="#" class="btn btn-primary">Download .py File</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<script>
+document.getElementsByClassName("nav-link")[2].classList.add("active");
+row = document.getElementsByClassName("col-sm-4");
+</script>
+{% endblock content %}
