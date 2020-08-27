@@ -5,6 +5,6 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('Applications/',views.applicationpro,name='applications'),
     path('Django/',views.djangopro,name='djanogo'),
-    path('Hacking/',views.hackingpro,name='hacking'),
+    path('Ludo/',views.hackingpro,name='hacking'),
     path('Search/',views.search,name="search")
 ]
